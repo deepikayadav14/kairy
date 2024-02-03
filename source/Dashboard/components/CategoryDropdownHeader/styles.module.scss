@@ -1,0 +1,160 @@
+@import '../../../styles/fonts';
+@import '../../../styles/reset';
+@import '../../../styles/variables';
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.categoryDropdown {
+		position: relative;
+		width: fit-content;
+
+		.categoryTab {
+			background: $primary-button-background-2;
+			border: 1px solid $primary-border;
+			box-shadow: 0px 2px 4px 0px rgba(92, 92, 92, 0.1);
+			border-radius: 8px;
+			display: flex;
+			cursor: pointer;
+			padding: 8px 12px;
+			justify-content: flex-start;
+			align-items: center;
+
+			p {
+				font-size: 16px;
+				margin: 0;
+				color: #575758;
+				font-weight: 900;
+			}
+
+			.dropIcon {
+				margin-top: 4px;
+				margin-left: 4px;
+				transition: all 0.3s ease-in-out;
+			}
+
+			.rotate0 {
+				transform: rotate(0deg);
+			}
+
+			.rotate180 {
+				transform: rotate(180deg);
+			}
+		}
+
+		.categoryTabDropdown {
+			z-index: 1;
+			transition: all 0.3s ease-in-out;
+			width: 12rem;
+			position: absolute;
+			max-height: 80vh;
+			top: 3.8rem;
+			background-color: $primary-button-background-2;
+			border: 1px solid #677b94;
+			border-radius: 8px;
+			box-shadow: 0px 4px 8px 0px rgba(92, 92, 92, 0.2);
+
+			padding: 0.5rem 0.8rem;
+			font-size: 18px;
+			overflow-y: hidden;
+			transition: all 0.2s ease-in-out;
+
+			.selectedCat {
+				color: #4b77ab;
+				font-weight: bold;
+			}
+
+			p {
+				margin-top: 12px;
+				color: $primary-button-text-2;
+				padding: 0;
+			}
+
+			.manageCategory {
+				border-top: 1px solid #677b94;
+				padding-top: 16px;
+				margin-top: 8px;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			.categoryItem {
+				margin: 1rem 0.5rem;
+
+				&:hover {
+					font-weight: 800;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.catDropHidden {
+			opacity: 0;
+			max-height: 0;
+		}
+
+		.catDropVisible {
+			max-height: 40rem;
+			opacity: 1;
+		}
+	}
+	.buttonContainer {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		button {
+			margin-inline: 0.5rem;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		.sortBtn {
+			position: relative;
+
+			.cardMenuDropdown {
+				z-index: 1;
+				position: absolute;
+				width: 8rem;
+				top: 2.4rem;
+				right: -2px;
+				padding: 0.8rem 0.5rem;
+				border-radius: 8px;
+				background-color: $primary-button-background-2;
+				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+				text-align: left;
+				transition: all 0.2s ease-in-out;
+
+				.itemContainer {
+					padding: 0.5rem 0.2rem;
+
+					p {
+						transition: all 0.2s ease-in-out;
+						&:hover {
+							cursor: pointer;
+							font-weight: 800;
+						}
+					}
+				}
+				&:last-child {
+					margin-bottom: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+		.buttonIcons {
+			width: 2rem;
+			height: 2rem;
+			background-color: $primary-button-background;
+			margin: 0 0 0 1rem;
+			border-radius: 4px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			svg {
+				fill: $primary-button-text;
+			}
+		}
+	}
+}

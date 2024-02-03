@@ -1,0 +1,110 @@
+@import '../../../styles/fonts';
+@import '../../../styles/reset';
+@import '../../../styles/variables';
+
+.searchContainer {
+	position: relative;
+	width: 73%;
+	.searchInput {
+		width: 100%;
+		height: 52px;
+		color: $primary-text;
+		font-size: 1rem;
+		background-color: $primary-button-background-3;
+		border: 1px solid #677b94;
+
+		padding: 8px 150px 8px 60px;
+		border-radius: 8px;
+		overflow: auto;
+
+		&:focus {
+			box-shadow: 0px 8px 16px 0px rgba(92, 92, 92, 0.3);
+		}
+	}
+	.searchIcon {
+		position: absolute;
+		fill: $primary-text;
+
+		left: 16px;
+		top: 14px;
+	}
+	.searchSource {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 12px;
+		right: 16px;
+		font-size: 1rem;
+		color: $primary-lite-text;
+		border-left: 0.5px solid $primary-lite-text;
+		padding-left: 1rem;
+		cursor: pointer;
+		.dropIcon {
+			margin-left: 4px;
+			transition: all 0.3s;
+			fill: $primary-lite-text;
+		}
+
+		.rotate0 {
+			transform: rotate(0deg);
+		}
+
+		.rotate180 {
+			transform: rotate(180deg);
+		}
+	}
+	.searchSourceDropdown {
+		display: inline-block;
+		padding: 0.5rem 0.8rem;
+		background-color: $primary-button-background-3;
+		border-radius: 8px;
+		position: absolute;
+		box-shadow: 0px 4px 8px 0px rgba(92, 92, 92, 0.2);
+		top: 50px;
+		right: 16px;
+		z-index: 1;
+		p {
+			margin: 0.8rem 0;
+			font-size: 1rem;
+			color: $primary-text;
+			cursor: pointer;
+			&:hover {
+				color: $primary-button-background;
+			}
+		}
+	}
+	.searchDropdown {
+		display: inline-block;
+		padding: 1rem 1rem 0.2rem 1rem;
+		top: 54px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		background-color: $primary-button-background-3;
+		border: 1px solid #677b94;
+		border-radius: 8px;
+		z-index: 1;
+		.searchQuery {
+			padding: 0.4rem;
+			box-sizing: border-box;
+			border-radius: 4px;
+			border: 1px solid $secondary-button-background;
+			&:hover {
+				color: $primary-text;
+				background-color: $primary-background;
+				border: 1px solid $primary-button-background;
+				cursor: pointer;
+			}
+		}
+		.focusedQuery {
+			padding: 0.4rem;
+			box-sizing: border-box;
+			border-radius: 4px;
+			border: 1px solid $secondary-button-background;
+			color: $primary-text;
+			background-color: $primary-background;
+			border: 1px solid $primary-button-background;
+			cursor: pointer;
+		}
+	}
+}

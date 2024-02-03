@@ -1,0 +1,38 @@
+@import '../styles/fonts';
+@import '../styles/reset';
+@import '../styles/variables';
+html {
+	height: max-content;
+}
+body {
+	min-height: max-content;
+	background-color: $primary-background;
+	min-height: unset !important;
+}
+.container {
+	height: 100%;
+	min-width: 350px;
+	padding: 20px 20px;
+	.h2 {
+		font-size: 1rem;
+		font-weight: 500;
+		margin-bottom: 1rem;
+		color: $primary-heading;
+	}
+	.textarea {
+		width: 100%;
+		font-size: 1rem;
+		height: 1.5rem;
+		color: $primary-text;
+		background-color: $input-background;
+		height: 5rem;
+		padding: 0.7rem;
+		border-radius: 8px;
+		overflow: auto;
+		border: 1px solid $primary-border;
+		margin-bottom: 1rem;
+		&:focus {
+			border: 2px solid $primary-border;
+		}
+	}
+}
